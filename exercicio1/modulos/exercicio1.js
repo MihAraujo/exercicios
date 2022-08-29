@@ -1,3 +1,10 @@
+/************************************************************************************************** 
+ * Objetivo:        Funções do sistema de uma faculdade
+ * Autor:           Milena Araujo de Souza
+ * Data de Criacao: 08/08/2022
+ * Versao:          1.0
+***************************************************************************************************/
+
 const { exit } = require("process");
 
 const media = function(nota1, nota2, nota3, nota4)
@@ -67,7 +74,7 @@ const exame = function (notaExame, media)
 {
     let nota = notaExame
     
-        mediaExame = (parseFloat(media) + parseFloat(nota))/2
+        let mediaExame = (parseFloat(media) + parseFloat(nota))/2
         return mediaExame
    
 }

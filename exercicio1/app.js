@@ -1,5 +1,5 @@
 /************************************************************************************************** 
- * Objetivo:        Aplicar estruturas de repetição (while e FOR)
+ * Objetivo:        Exibições do sistema de uma faculdade
  * Autor:           Milena Araujo de Souza
  * Data de Criacao: 08/08/2022
  * Versao:          1.0
@@ -7,7 +7,7 @@
 
 console.log('\n---------- MÉDIA ESCOLAR ----------');
 
-const {media, validacaoStatus, relatorioExame, exame, validacaoExame, relatorioGeral} = require('./modulos/exercicio1.js')
+const {media, validacaoStatus, relatorioExame, exame, validacaoExame, relatorioGeral} = require('./exercicio1/exercicio1')
 const { exit } = require('process');
 var readline = require('readline');
 
@@ -95,9 +95,9 @@ entradaDados.question('\nNome do curso: ', function(nomeCurso){
                                             if(statusAluno == 'EXAME!')
                                             {
                                                 entradaDados.question('Qual a nota do seu exame? ', function(notaExame){
-                                                    let resultadoExame = notaExame
+                                                    //let resultadoExame = notaExame
 
-                                                    let exameAluno = exame (resultadoExame, mediaAluno)
+                                                    let exameAluno = exame (notaExame, mediaAluno)
                                                     console.log(exameAluno)
 
                                                     let exameValidacao = validacaoExame (exameAluno)
@@ -108,7 +108,7 @@ entradaDados.question('\nNome do curso: ', function(nomeCurso){
                                             relatorioGeral (curso, disciplina, statusAluno, mediaAluno, mediaExame, nota1, nota2, nota3, nota4, notaExame, nomeAlu, sexoAlu, nomeProf, sexoProf)
                                             
                                             
-                                        }
+                                        } 
                                     })
                                 })
                             })
@@ -118,4 +118,4 @@ entradaDados.question('\nNome do curso: ', function(nomeCurso){
             })
         })
     })
-})  
+})
